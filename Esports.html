@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Astra Minor Project</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital@1&display=swap" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Location Wise DS-->
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Region', '% of Players per region'],
+          ['North America',7],
+          ['Latin America',10],
+          ['Europe',14],
+          ['Middle East & Africa', 15],
+          ['Asia-Pacific',55],
+        ]);
+
+        var options = {
+          title: '2021 Global Players per region',
+          pieHole: 0.6,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <!--Graph 2-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Catogorie', 'Revenue'],
+          ['Gaming Hardware',108600000000],
+          ['Gaming Software',32400000000],
+          ['Gaming Content & IP', 194500000000],
+        ]);
+
+        var options = {
+          title: 'Gaming Market Breakdown'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    
+      <!--Graph 3-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Years', 'Revenue'],
+          ["2019", 957.5],
+          ["2020", 947.1],
+          ["2021", 1084.1],
+          ['2024', 1671.7]
+        ]);
+
+        var options = {
+          title: 'Data Scientist Jobs based on Experience',
+          width: 900,
+          legend: { position: 'none' },
+          chart: { title: 'eSports market revenue worldwide from 2019 to 2024',
+                    subtitle: '(in Million U.S. dollers)'},
+          axes: {
+            x: {
+              0: {  label: 'Years'} // Top x-axis.
+            },
+          },
+          axes: {
+            y: {
+              0: {  label: 'Revenue'} // Top x-axis.
+            },
+          },
+          bar: { groupWidth: "90%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('side_x_div'));
+        chart.draw(data, options);
+      };
+    </script>
+
+    <!--Graph 4-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Roles', 'No. of jobs'],
+          ["Machine Learning",510 ],
+          ["Data Science", 290],
+          ["Python",274 ],
+          ["Data mining",241 ],
+          ["Data Scientist",188 ],
+          ["R",171 ],
+          ["Computer Science",162 ],
+          ["Artificial Intelligence", 140],
+          ["Data Analysis", 150],
+          ["Deep Learning",110 ],
+          ["NIP",112 ],
+          ["SQL",115 ],
+          ["SAS",109 ],
+          ["Data Managment", 102],
+          ["C++",95 ],
+          ["Predictive Modeling", 92],
+          ["Algorithms",88 ],
+          ["Statistics",87 ],
+          ["Java",82 ],
+          ["Big Data",79 ],
+          ["Data Structure", 78],
+          ["Neural Networks",74 ],
+          ["Computer Vision", 73],
+          ["Html", 74],
+          ["Hadoop",73 ],
+          ["Spark", 71],
+          ["Natual Language Processing", 74],
+          ["Mysql",71 ],
+          ["Tableau", 70]
+        ]);
+
+        var options = {
+          title: 'Data Scientist Roles',
+          hAxis: {title: "Jobs" , direction:-1, slantedText:true, slantedTextAngle:90 },
+          width: 900,
+          legend: { position: 'none' },
+          chart: { title: 'Data Scientist Roles',
+                    subtitle: 'Data derived from web scraping'},
+          bars: 'horizontal',
+          axes: {
+            x: {
+              /*ticks:{
+                    autoSkip: false,
+                    maxRotation: 90,
+                    minRotation: 90
+                },*/
+              0: {  label: 'No. of Jobs'} // Top x-axis.
+            }
+          },
+          vAxis: {
+      format: '#,##0.0 %',
+      ticks: [0, .2, .4, .6, .8, 1]
+    },
+              bar: { groupWidth: "90%" },
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('bottom_x_div'));
+        chart.draw(data, options);
+      };
+    </script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html">Astra</a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#Bifurcation">Bifurcation</a></li>
+          <li><a class="nav-link scrollto" href="#Market">Current Market</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">The Gaming Industry</span></h2>
+          <p class="animate__animated fanimate__adeInUp">The video game industry is the industry involved in the development, marketing, and monetization of video games.
+          It encompasses dozens of job disciplines and its component parts employ thousands of people worldwide. The video game industry has grown from focused markets to mainstream in the recent years. </p>
+          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+      </defs>
+      <g class="wave1">
+        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+      </g>
+    </svg>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+        <!-- ======= About Data Science Section ======= -->
+        <section id="about" class="about">
+          <div class="container">
+    
+            <div class="section-title" data-aos="zoom-out">
+              <h2>About</h2>
+              <p>Esports</p>
+            </div>
+    
+            <div class="row content" data-aos="fade-up">
+              <div class="col-lg-6">
+                <p>
+                  E-sports was commonly understood as casual video gaming; however, it is now an intensely competitive and complex sporting experience. With hours of training and practice, the e-sports players engage in a highly competitive tournament to win. </br>
+
+                  The main fields being:
+                </p>
+                <ul>
+                  <li><i class="ri-check-double-line"></i> Professional Player</li>
+                  <li><i class="ri-check-double-line"></i> Game Developer</li>
+                  <li><i class="ri-check-double-line"></i> Game Streamer</li>
+                </ul>
+                <p>
+                  Gaming and esports are distinct yet integrated ecosystems, combining to form a sector that presents rich opportunities for both industry and governments.
+                </p>
+              </div>
+              <div class="col-lg-6 pt-4 pt-lg-0">
+                <p>
+                  Gaming & esports is a vibrant and fast-growing sector, powered largely by the passion of 3 billion enthusiasts around the globe. </br>
+                  
+                  With its substantial revenue potential, the high-quality jobs it creates, and its reputational benefits, Gaming & esports presents rich opportunities for industry and national governments alike.</br>
+
+                  Encompassing a range of electronic amusements where players interact with an interface or input device to produce visual feedback , video games have emerged as a global cultural force.</br>
+
+                  As evidence of their popularity, the video game Grand Theft Auto V, for example, set seven Guinness World Records since its release in 2013, including a world record for <strong>US$1 billion</strong> of sales within three days of launching.</br>
+                </p>
+              </div>
+              <p></br></p>
+              <blockquote class="blockquote blockquote--bordered">
+                <p class="blockquote__text">
+                  Annual global gaming revenue will exceed $200 billion by 2023, which is more than worldwide box office earning, music streaming and albumsales, and the top five wealthiest sports leagues combined.
+                </p>
+                <p class="blockquote__text blockquote__text--credit">- BCG</p>
+              </blockquote>
+            </div>
+          </div>
+        </section><!-- End About Data Science Section -->
+        <section id="Bifurcation" class="Bifurcation">
+          <div class="container">
+    
+            <div class="section-title" data-aos="zoom-out">
+              <h2>Bifurcation</h2>
+              <p>Gaming Industry</p>
+              <img src="assets/img/Esports/Gameing industry B.png" class="img-fluid" alt="">
+              <img src="assets/img/Esports/esports Bifercation b.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          </section>
+        <section id="Market" class="Market">
+          <div class="container">
+    
+            <div class="section-title" data-aos="zoom-out">
+              <h2>Esports Current Market</h2>
+                  <p>Esports Job Market Analysis</p>
+                  <div id="side_x_div" style="width: 900px; height: 500px;"  class="center"></div>
+                  <!--<div id="bottom_x_div" style="width: 1100px; height: 700px;"  class="center" class="flot-x-axis flot-tick-label"></div>-->
+                  <img src="assets/img/Esports/Esports Market post covid.jpg" class="img-fluid" alt="">
+                  <div class="container">
+                    <div class="row">
+                      <div id="donutchart" style="width: 625px; height: 420px;" class="col-md-6" ></div>
+                      <div id="piechart" style="width: 625px; height: 420px; " class="col-md-6"></div>
+                      <img src="assets/img/Esports/Esports Market Breakdown.jpg" class="img-fluid" alt="">                    
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>Astra</h3>
+      <p>Phrase</p>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Astra</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

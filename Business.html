@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Astra Minor Project</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital@1&display=swap" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Location Wise DS-->
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Location', '% of jobs available'],
+          ['Bengaluru',     37.8],
+          ['Mumbai',      12.7],
+          ['Hyderbad',  12.3],
+          ['Pune', 9.3],
+          ['Gurgaon',    7.5],
+          ['Chennai',     7.1],
+          ['Noida',      4.9],
+          ['Delhi',  3.6],
+          ['NCR', 3.4],
+          ['Kochi',    1.4]
+          
+        ]);
+
+        var options = {
+          title: 'Location Wise Data Scientist Jobs',
+          pieHole: 0.6,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <!--Graph 2-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Company', '% of total jobs'],
+          ['Analytics Vidya Educon PVT ltd',     21.4],
+          ['Career Maker',      16.4],
+          ['Huquo Consulting pvt. ltd', 15.7],
+          ['Axcess Consulting Services', 13.8],
+          ['Hyrefox',    6.9],
+          ['Ish India',     6.3],
+          ['Catalyst',      5.7],
+          ['The Hiring Story',  5.0],
+          ['New Era India', 4.4],
+          ['Serving Skill',    4.4]
+        ]);
+
+        var options = {
+          title: 'Companies with most Job Postings'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    
+      <!--Graph 3-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Years', 'Revenue'],
+          ["2019", 957.5],
+          ["2020", 947.1],
+          ["2021", 1084.1],
+          ['2024', 1671.7]
+        ]);
+
+        var options = {
+          title: 'Data Scientist Jobs based on Experience',
+          width: 900,
+          legend: { position: 'none' },
+          chart: { title: 'eSports market revenue worldwide from 2019 to 2024',
+                    subtitle: '(in Million U.S. dollers)'},
+          axes: {
+            x: {
+              0: {  label: 'Years'} // Top x-axis.
+            },
+          },
+          axes: {
+            y: {
+              0: {  label: 'Revenue'} // Top x-axis.
+            },
+          },
+          bar: { groupWidth: "90%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('side_x_div'));
+        chart.draw(data, options);
+      };
+    </script>
+
+    <!--Graph 4-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Areas', '% of Job Growth'],
+          ["Average for all Occupations",11 ],
+          ["Computer & Information Systems", 15],
+          ["Medical & Health Centers",22],
+          ["Advertisiong, Promotions and Marketing",13],
+        ]);
+
+        var options = {
+          title: 'Job Growth through 2022',
+          hAxis: {title: "Areas" , direction:-1, slantedText:true, slantedTextAngle:90 },
+          width: 900,
+          legend: { position: 'none' },
+          chart: { title: 'Job growth Statistics for Selected Business Managment Careers:',
+                    subtitle: 'Job Growth through 2022'},
+          bars: 'horizontal',
+          axes: {
+            x: {
+              /*ticks:{
+                    autoSkip: false,
+                    maxRotation: 90,
+                    minRotation: 90
+                },*/
+              0: {  label: '% of Job Growth'} // Top x-axis.
+            }
+          },
+          vAxis: {
+      format: '#,##0.0 %',
+      ticks: [0, .2, .4, .6, .8, 1]
+    },
+              bar: { groupWidth: "90%" },
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('bottom_x_div'));
+        chart.draw(data, options);
+      };
+    </script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html">Astra</a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#Bifurcation">Bifurcation</a></li>
+          <li><a class="nav-link scrollto" href="#Roadmap">Roadmap</a></li>
+          <li><a class="nav-link scrollto" href="#Market">Current Market</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Business Studies</span></h2>
+          <p class="animate__animated fanimate__adeInUp">Business is defined as an organized economic activity, wherein the exchange of goods and services takes place, for adequate consideration. 
+            It is nothing but a method of making money, from commercial transactions. It includes all those activities whose sole aim is to make available the desired goods and services to the society, in an effective manner.</p>
+          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+      </defs>
+      <g class="wave1">
+        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+      </g>
+    </svg>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+        <!-- ======= About Data Science Section ======= -->
+        <section id="about" class="about">
+          <div class="container">
+    
+            <div class="section-title" data-aos="zoom-out">
+              <h2>About</h2>
+              <p>Business</p>
+            </div>
+    
+            <div class="row content" data-aos="fade-up">
+              <div class="col-lg-6">
+                <p>
+                  The main field of business education include: accounting, business administration, business analysis, business computing, business ethics, business statistics, commercial law, developing markets, economic principles, finance, human resources, international studies, management, marketing, operations management, research and technology</br>
+
+                  With the types of Business Education Program being:
+                </p>
+                <ul>
+                  <li><i class="ri-check-double-line"></i> Tech-Prep Programs</li>
+                  <li><i class="ri-check-double-line"></i> Co-ops</li>
+                  <li><i class="ri-check-double-line"></i> Interships</li>
+                  <li><i class="ri-check-double-line"></i> School to work Programs</li>
+                  <li><i class="ri-check-double-line"></i> Career Academies</li>
+                </ul>
+              </div>
+              <div class="col-lg-6 pt-4 pt-lg-0">
+                <p>
+                  A business is defined as an organization or enterprising entity engaged in commercial, industrial, or professional activities. </br>
+                  
+                  Businesses can be for-profit entities or non-profit organizations. Business types range from limited liability companies, sole proprietorships, corporations, and partnerships. </br>
+
+                  We can bacically divide the field into 9 tasks with will help identify necessary changes for business education and providing a roadmap that helps other business schools adapt to the new digital era</br>
+
+                  With the tasks being Marketing, Accounting, Finance, Operations, Enterprenteurship, Managment, Statergy, Organizational Behaviour, Economics.
+                </p>
+              </div>
+            </div>
+        </section><!-- End About Data Science Section -->
+        <section id="Bifurcation" class="Bifurcation">
+          <div class="container">
+    
+            <div class="section-title" data-aos="zoom-out">
+              <h2>Bifurcation</h2>
+              <p>Business Studies</p>
+               <img src="assets/img/Business/Business Bifurcation.png" class="img-fluid" class="center" alt="">
+            </div>
+          </div>
+          </section>
+        </section><!-- End About Data Science Section -->
+        <section id="Roadmap" class="Bifurcation">
+          <div class="container">
+            <div class="section-title" data-aos="zoom-out">
+              <h2>Roadmap</h2>
+              <p>Business Studies</p>
+               <img src="assets/img/Business/Business Roadmap 1.jpeg" class="img-fluid" class="center" alt="">
+               <img src="assets/img/Business/Business Roadmap 2.jpeg" class="img-fluid" class="center" alt="">
+              <!--<img src="assets/img/Ds_2.jpg" class="img-fluid" alt="">-->
+            </div>
+          </div>
+          </section>
+        <section id="Market" class="Market">
+          <div class="container">
+    
+            <div class="section-title" data-aos="zoom-out">
+              <h2>Business Studies Current Market</h2>
+                  <p>Business Job Market Analysis</p>
+            </br>
+                  <!--<div class="container">
+                    <div class="row">
+                      <div id="donutchart" style="width: 625px; height: 420px;" class="col-md-6" ></div>
+                      <div id="piechart" style="width: 625px; height: 420px; " class="col-md-6"></div>                    
+                    </div>
+                </div>-->
+                  <!--<div id="side_x_div" style="width: 900px; height: 500px;"  class="center"></div>-->
+                  <img src="assets/img/Business/Business-market.jpeg" class="img-fluid" alt="">
+                  <div id="bottom_x_div" style="width: 1100px; height: 700px;"  class="center" ></div>
+            </div>
+            </div>
+        </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>Astra</h3>
+      <p>Phrase</p>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Astra</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
