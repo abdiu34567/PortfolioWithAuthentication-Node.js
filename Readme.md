@@ -2,8 +2,8 @@
 
 # Use
 ```bash
-npm install
-npm run serve
+1️⃣ npm install
+2️⃣ npm run serve
 ```
 
-Enjoy
+👍 Enjoy
